@@ -1,0 +1,27 @@
+MySQL
+  1 user, 1 db per app. 
+  mysql --version - see the version of installed mysql
+  mysql.server - starts mysql server
+  mysql.server status - Shows the status of the sql server
+  mysql -u root -p - Login to your mysql client
+  mysql>
+    help - shows commands that you can run
+    help contents - shows the topics (like table of contents)
+    have to end queries with a semi-colon;
+    \c - cancels the query line
+    \g - creates a readable list
+    page less - creates pages for the information instead of spamming everything at you
+    nopager - turns pager shit off
+    SELECT current_user - shows current user
+    SELECT user, host FROM mysql.user - list's all users
+    CREATE USER '[usr]'@'[ip address]' IDENTIFIED BY '[password]' - Creates a user on the database you specified by IP address
+    GRANT ALL ON [name of db].[name of table] TO '[username]'@'[address]' - Gives all permissions of that table to that db to that specific username at that specific address
+    DROP USEr '[usr]'@'[ip address]' - Removes users
+    CREATE DATABASE [name of db] - Create a database
+    CREATE DATABASE IF NOT EXISTS [name of db] - Create a database if one does not exist
+    SHOW WARNINGS - Creates a warning table, with the warnings (most recent query)
+    SHOW DATABASES - (plural) shows all the databases
+    SHOW CREATE DATABASE [name of db]\G - Shows how that database was created
+    USE [db name] - Use that particular database name
+    DROP DATABASE [name of db] - Deletes database
+    DROP DATABASE IF EXISTS [name of db] - Drops the database if it does exists

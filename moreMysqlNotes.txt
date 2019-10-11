@@ -1,0 +1,35 @@
+Table join can query data from multiple tables
+Docker containers can run mysql inside of it
+
+terminal install via linux package manager
+on a server can install with cpanel
+
+MySQL workbench - GUI for managing the database
+
+mariaDB a superset of mysql.
+
+SHOW GRANTS FOR '[username]'@'[address]' - Shows the privledges for any user
+
+No need for flush privledges, assigned privs are effective immediately. 
+Not sure what flush privs does.
+
+Never put plain text into database for passwords
+  Always want to hash the password
+
+Default port 3306
+
+ctrl+enter - runs commands within workbench
+
+can insert multiple entries in one line, seperated by comma.
+
+ALTER TABLE [table name] ADD [column name to add] [datatype] - Adds a column to the table. 
+ALTER TABLE [table name] MODIFY COLUMN [column name] [datatype] - Modifies a column on the table.
+SELECT * FROM [db name] ORDER BY [column name] ASC - Sorts everything ascending by specified column
+  DESC - is descending
+SELECT CONCAT([column name], ' ', [column name]) AS '[Name for the column to display]', [column name] FROM [db name] - Will concatenate 2 columns in one column and display it under the name you specify. 
+SELECT DISTINCT [column name] FROM [db name] - Shows you only unique entries of specified column
+SELECT * FROM [db name] WHERE [column name] BETWEEN [parameter] AND [paramenter] - Displays users that meet criteria between the two parameters
+When doing like whatever is infront of % that's what it will search 'what starts with ...'. 
+  Whatever is after the % 'what ends with...'
+  '%[something]%' means anything can before and anything can be after
+  NOT LIKE - Will give us opposite, what does not equal the value searched.

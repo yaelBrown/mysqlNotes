@@ -1,0 +1,13 @@
+{
+  "sqltools.connections": [
+    {
+      "database": "codeup_test_db",
+      "dialect": "MySQL",
+      "name": "codeup-db",
+      "password": "codeup",
+      "port": 3306,
+      "server": "localhost",
+      "username": "root"
+    }
+  ]
+}

@@ -1,9 +1,20 @@
 MySQL
+  Documentation - https://dev.mysql.com/doc/refman/8.0/en/
+  VSCODE plugin Documentation - https://vscode-sqltools.mteixeira.dev/connections/executing-queries
+  When copying sql code, white space breaks the sql code.
+    Copy as plain text
   1 user, 1 db per app. 
+  Migration file - File that creates tables.
+
+  Seeder file - Will populate the table with records.
+  Datatypes in Java and Mysql are not one to one. 
+  
   mysql --version - see the version of installed mysql
   mysql.server - starts mysql server
   mysql.server status - Shows the status of the sql server
   mysql -u root -p - Login to your mysql client
+  mysql -u root -p -t < filename.sql - Runs the file in the sql command prompts
+  
   mysql>
     help - shows commands that you can run
     help contents - shows the topics (like table of contents)
@@ -12,11 +23,14 @@ MySQL
     \g - creates a readable list
     page less - creates pages for the information instead of spamming everything at you
     nopager - turns pager shit off
+  
     SELECT current_user - shows current user
     SELECT user, host FROM mysql.user - list's all users
     CREATE USER '[usr]'@'[ip address]' IDENTIFIED BY '[password]' - Creates a user on the database you specified by IP address
     GRANT ALL ON [name of db].[name of table] TO '[username]'@'[address]' - Gives all permissions of that table to that db to that specific username at that specific address
+      List of privleges - https://dev.mysql.com/doc/refman/5.7/en/privileges-provided.html#idm139711220094800
     DROP USEr '[usr]'@'[ip address]' - Removes users
+  
     CREATE DATABASE [name of db] - Create a database
     CREATE DATABASE IF NOT EXISTS [name of db] - Create a database if one does not exist
     SHOW WARNINGS - Creates a warning table, with the warnings (most recent query)
@@ -25,3 +39,26 @@ MySQL
     USE [db name] - Use that particular database name
     DROP DATABASE [name of db] - Deletes database
     DROP DATABASE IF EXISTS [name of db] - Drops the database if it does exists
+  
+    SHOW TABLES - Shows all tables
+    DESCRIBE [table name] - Shows columns and rows of all the tables.
+    CREATE TABLE [table name] - Creates a table
+      Mysql datatypes - http://www.mysqltutorial.org/mysql-data-types.aspx
+      Math with different datatypes
+      bigint - Better for saving phone numbers
+      int 
+        [column name] MEDIUMINT UNSIGNED - unsigned frees up more memory
+      floats/double - Not for money, certain number of precision not exact number
+      decimal - Preferred for Money
+        DECIMAL(10,2) - 9999999.22
+          10 is the total digits before the decimal place
+          2 after the decimal place
+    DROP TABLE [table name] - Removes table
+    ALTER TABLE - make changes to tables
+  
+    SOURCE [.sql file location] - Run sql scripts while already being logged in.
+  
+    INSERT INTO [db name]([column name], [column name], [column name]) VALUES ([content], [content], [content]) - Adds data to database.
+      '' - escapes apostrophe's. "can''t"
+      \' - also escapes apostrophe's. "can\'t"
+    SELECT * FROM [db name] - Shows everything in the database

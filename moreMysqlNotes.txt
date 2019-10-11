@@ -1,17 +1,19 @@
 Table join can query data from multiple tables
 Docker containers can run mysql inside of it
-
 terminal install via linux package manager
 on a server can install with cpanel
-
 MySQL workbench - GUI for managing the database
-
 mariaDB a superset of mysql.
+No need for flush privledges, assigned privs are effective immediately. 
+  Not sure what flush privs does.
+Never put plain text into database for passwords
+  Always want to hash the password
+ctrl+enter - runs commands within workbench
+Default port 3306
 
 SHOW GRANTS FOR '[username]'@'[address]' - Shows the privledges for any user
 
-No need for flush privledges, assigned privs are effective immediately. 
-Not sure what flush privs does.
+
 
 Never put plain text into database for passwords
   Always want to hash the password
